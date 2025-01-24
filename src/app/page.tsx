@@ -14,9 +14,9 @@ export default function Home() {
       <Hero />
       <SectionTitle
         preTitle="L3 Squad Benefits"
-        title=" Why should you use this landing page"
+        title="Why Should You Join This Community?"
       >
-        L3Squad stands for Life Long Learners and its a non profit organization also a community of passionate professionals who are committed to lifelong learning and sharing knowledge.
+        Whether you're a student or a working professional, our resources and community are designed to fit your learning needs, Connect with experienced professionals to guide you in your personal and professional growth.
       </SectionTitle>
 
       <Benefits data={benefitOne} />
@@ -24,28 +24,28 @@ export default function Home() {
 
       <SectionTitle
         preTitle="Watch a video"
-        title="Learn how to fullfil your needs"
+        title="How to Get Started with Our Lifelong Learning Community"
       >
-        This section is to highlight a promo or demo video of your product.
-        Analysts says a landing page with video has 3% more conversion rate. So,
-        don&apos;t forget to add one. Just like this.
+        This section is to highlight a promo or demo video of our community "Unlock your potential and achieve career growth by engaging with a supportive community: "L3 SQUAD"
       </SectionTitle>
 
       <Video videoId="fZ0D0cnR88E" />
 
       <SectionTitle
         preTitle="Testimonials"
-        title="Here's what our customers said"
+        title="Here's what our community said"
       >
-        Testimonials is a great way to increase the brand trust and awareness.
-        Use this section to highlight your popular customers.
+        Mentorship Opportunities: Connect with industry experts for guidance and personalized advice.
+        Skill Development: Access workshops, courses, and resources tailored to career advancement.
+        Networking Events: Build relationships with peers, professionals, and potential employers.
+        Knowledge Sharing: Join forums and discussions to exchange ideas and insights.
+
       </SectionTitle>
 
       <Testimonials />
 
       <SectionTitle preTitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the
-        conversion rate as well as support or chat requests.
+      "Answer your community members' possible questions here. Providing clear and helpful responses fosters trust, encourages engagement, and reduces the need for additional support or inquiries."
       </SectionTitle>
 
       <Faq />

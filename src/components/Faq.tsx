@@ -36,21 +36,21 @@ export const Faq = () => {
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question: "What is the purpose of this community?",
+    answer: "This community is designed to empower lifelong learners by providing free resources, networking opportunities, and a collaborative environment to support personal and professional growth.",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "Who can join the community?",
+    answer: "Anyone with a passion for learning, including students, professionals, and individuals seeking self-improvement.",
   },
   {
-    question: "What is your refund policy? ",
+    question: "How can I contribute to the community? ",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "You can share your knowledge, mentor others, host workshops, or actively participate in discussions and projects.",
   },
   {
-    question: "Do you offer technical support? ",
+    question: "Can I collaborate on projects with other members? ",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Absolutely! Our community encourages collaborative projects and peer-to-peer learning.",
   },
 ];
