@@ -11,46 +11,47 @@ import benefitOneImg from "../../public/img/benefit-one.png";
 import benefitTwoImg from "../../public/img/benefit-two.png";
 
 const benefitOne = {
-  title: "Highlight your benefits",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  title: "Life long Learners: 'L3 SQUAD' ",
+  desc: "Join our community to unlock a world of free, lifelong learning opportunities. With access to expert mentorship, collaborative projects, and a wide range of educational resources, you’ll be supported in your personal and professional growth.",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
+      title: "Build a Strong Network",
+      desc: "Connect with fellow learners, professionals, and experts, expanding your career and learning opportunities.",
       icon: <FaceSmileIcon />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
+      title: "Ongoing Support and Resources",
+      desc: "Stay up-to-date with new materials, events, and opportunities that are consistently added to help you grow.",
       icon: <ChartBarSquareIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
+      title: "Completely Free",
+      desc: "No hidden fees—everything in the community is completely free for all members, ensuring accessible education for all.",
       icon: <CursorArrowRaysIcon />,
     },
   ],
 };
 
 const benefitTwo = {
-  title: "Offer more benefits here",
-  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+  title: "Our Community Benefits Here",
+  desc: "For College Students: We provide mentorship, internships, skill-building workshops, and networking events to prepare you for your dream career.  For Working Professionals: Access upskilling programs, leadership training, career counseling, and industry connections to excel in your field." ,
+  
   image: benefitTwoImg,
   bullets: [
     {
-      title: "Benefits 1",
-      desc: "benefits desc goes here",
+      title: "Collaborative Learning",
+      desc: "Share knowledge and learn from others' experiences to enhance your skills.",
       icon: <DevicePhoneMobileIcon />,
     },
     {
-      title: "Benefits 2",
-      desc: "benefits desc goes here",
+      title: "Goal Setting and Accountability",
+      desc: "Set clear career goals with community support to stay on track.",
       icon: <AdjustmentsHorizontalIcon />,
     },
     {
-      title: "Benefits 3",
-      desc: "benefits desc goes here",
+      title: "Exposure to Opportunities",
+      desc: "Discover job openings, internships, and collaborative projects within the network.",
       icon: <SunIcon />,
     },
   ],
