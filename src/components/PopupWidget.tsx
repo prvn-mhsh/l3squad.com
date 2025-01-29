@@ -280,7 +280,7 @@ export function PopupWidget() {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            Web3Forms
+                            L<sup>'3'</sup> Forms
                           </a>
                         </span>
                       </p>

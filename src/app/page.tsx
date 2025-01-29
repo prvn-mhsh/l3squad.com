@@ -29,7 +29,7 @@ export default function Home() {
         This section is to highlight a promo or demo video of our community "Unlock your potential and achieve career growth by engaging with a supportive community: "L3 SQUAD"
       </SectionTitle>
 
-      <Video videoId="fZ0D0cnR88E" />
+      <Video videoId="DekAMet0qA8" />
 
       <SectionTitle
         preTitle="Testimonials"
