@@ -15,7 +15,6 @@ export const Testimonials = () => {
             <p className="text-2xl leading-normal ">
             People from different backgrounds and disciplines bring <Mark> fresh ideas </Mark>and unique insights.
             </p>
-
             <Avatar
               image={praveenImg}
               name="Praveen"
@@ -66,10 +65,11 @@ function Avatar(props: Readonly<AvatarProps>) {
       <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
         <Image
           src={props.image}
-          width="40"
-          height="40"
+          width="56"
+          height="56"
           alt="Avatar"
           placeholder="blur"
+          className="object-cover"
         />
       </div>
       <div>

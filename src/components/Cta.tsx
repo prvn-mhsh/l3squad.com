@@ -10,7 +10,7 @@ export const Cta = () => {
             Ready to work-with our community?
           </h2>
           <p className="mt-2 font-medium text-white text-opacity-90 lg:text-xl">
-            Visit our gitup and start to work with us .
+            Visit our github and start to work with us .
           </p>
         </div>
         <div className="flex-shrink-0 w-full text-center lg:w-auto">
