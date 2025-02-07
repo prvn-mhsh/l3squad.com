@@ -1,11 +1,12 @@
 import {
-  FaceSmileIcon,
-  ChartBarSquareIcon,
   CursorArrowRaysIcon,
   DevicePhoneMobileIcon,
   AdjustmentsHorizontalIcon,
   SunIcon,
+  UserGroupIcon,
+  GlobeAsiaAustraliaIcon
 } from "@heroicons/react/24/solid";
+
 
 import benefitOneImg from "../../public/img/benefit-one.png";
 import benefitTwoImg from "../../public/img/benefit-two.png";
@@ -18,12 +19,12 @@ const benefitOne = {
     {
       title: "Build a Strong Network",
       desc: "Connect with fellow learners, professionals, and experts, expanding your career and learning opportunities.",
-      icon: <FaceSmileIcon />,
+      icon: <GlobeAsiaAustraliaIcon />,
     },
     {
       title: "Ongoing Support and Resources",
       desc: "Stay up-to-date with new materials, events, and opportunities that are consistently added to help you grow.",
-      icon: <ChartBarSquareIcon />,
+      icon: <UserGroupIcon />,
     },
     {
       title: "Completely Free",
