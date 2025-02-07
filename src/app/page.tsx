@@ -15,6 +15,7 @@ export default function Home() {
       <SectionTitle
         preTitle="L3 Squad Benefits"
         title="Why Should You Join This Community?"
+        
       >
         Whether you're a student or a working professional, our resources and community are designed to fit your learning needs, Connect with experienced professionals to guide you in your personal and professional growth.
       </SectionTitle>
