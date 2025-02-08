@@ -24,13 +24,16 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      - name: Configure Git User
+     - name: Configure Git User
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Deploy Project
-        run: npm run deploy
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          npx gh-pages -d out --repo "https://${GH_TOKEN}@github.com/org/repo.git" --branch gh-pages --message "Deploy: $(date +'%Y-%m-%d %H:%M:%S')"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
