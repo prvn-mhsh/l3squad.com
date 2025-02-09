@@ -1,52 +1,106 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import { Container } from "@/components/Container";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
 import praveenImg from "../../public/img/praveen.png";
 import VenkatImg from "../../public/img/Venkat.png";
 import YuvarajImg from "../../public/img/Yuvaraj.png";
+import KarthiImg from "../../public/img/karthikeyan.png";
+import SabarinathanImg from "../../public/img/sabari.png";
 
 export const Testimonials = () => {
+  const testimonialData = [
+    {
+      text: "I transformed my life from zero to hero. I have learned a lot from this community, which has helped shape me into a skilled engineer.",
+      image: praveenImg,
+      name: "Praveen",
+      title: "Full Stack Intern",
+      bgColor: "bg-red-50",
+    },
+    {
+      text: "This community has been my go-to place for learning and inspiration. I am glad to be part of this team.",
+      image: VenkatImg,
+      name: "Venkat",
+      title: "Working @ META",
+      bgColor: "bg-green-50",
+    },
+    {
+      text: "The mentorship and resources available here are unmatched. I've gained valuable insights into data analysis and machine learning.",
+      image: YuvarajImg,
+      name: "Yuvaraj",
+      title: "Frontend Developer",
+      bgColor: "bg-blue-50",
+    },
+    {
+      text: "It's not just about learning; it's about contributing and giving back. The open discussions and coding challenges push me to become a better developer.",
+      image: KarthiImg,
+      name: "Karthikeyan",
+      title: "DevOps Lead",
+      bgColor: "bg-yellow-50",
+    },
+    {
+      text: "The community's focus on sharing knowledge has made me a better engineer. I feel empowered to explore new technologies and collaborate with brilliant minds.",
+      image: SabarinathanImg,
+      name: "Sabarinathan",
+      title: "Marketing Automation Engineer",
+      bgColor: "bg-purple-50",
+    },
+  ];
+
+  const swiperRef = useRef<any>(null);
+
   return (
     <Container>
-      <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
-        <div className="lg:col-span-2 xl:col-auto">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-            People from different backgrounds and disciplines bring <Mark> fresh ideas </Mark>and unique insights.
-            </p>
-            <Avatar
-              image={praveenImg}
-              name="Praveen"
-              title="L3 SQUAD"
-            />
-          </div>
-        </div>
-        <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-            It's not about formal education; it's about a mindset of<Mark> continuous discovery</Mark>.
-            </p>
+      <div className="relative">
+        <Swiper
+          modules={[Pagination]}
+          pagination={{ clickable: true }}
+          spaceBetween={30}
+          slidesPerView={1}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
+          {testimonialData.map((testimonial, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className={`flex flex-col justify-between w-full h-full px-14 py-14 rounded-2xl ${testimonial.bgColor} dark:bg-trueGray-800`}
+              >
+                <p className="text-2xl leading-normal">{testimonial.text}</p>
+                <Avatar
+                  image={testimonial.image}
+                  name={testimonial.name}
+                  title={testimonial.title}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-            <Avatar
-              image={VenkatImg}
-              name="Venkat"
-              title="L3 SQUAD"
-            />
-          </div>
+        {/* Navigation Buttons */}
+        <div className="absolute top-1/2 left-3 transform -translate-y-1/2 z-10">
+          <button
+            className="p-2 bg-gray-800 rounded-full hover:bg-gray-600"
+            onClick={() => swiperRef.current?.slidePrev()}
+          >
+            <ArrowLeftIcon className="w-5 h-5 text-white" />
+          </button>
         </div>
-        <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
-            it's about applying what we<Mark> learn to make an impact</Mark>, whether in our personal lives, careers, or the world at large.
-            </p>
-
-            <Avatar
-              image={YuvarajImg}
-              name="Yuvaraj"
-              title="L3 SQUAD"
-            />
-          </div>
+        <div className="absolute top-1/2 right-3 transform -translate-y-1/2 z-10">
+          <button
+            className="p-2 bg-gray-800 rounded-full hover:bg-gray-600"
+            onClick={() => swiperRef.current?.slideNext()}
+          >
+            <ArrowRightIcon className="w-5 h-5 text-white" />
+          </button>
         </div>
       </div>
     </Container>
@@ -65,8 +119,8 @@ function Avatar(props: Readonly<AvatarProps>) {
       <div className="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
         <Image
           src={props.image}
-          width="56"
-          height="56"
+          width={56}
+          height={56}
           alt="Avatar"
           placeholder="blur"
           className="object-cover"
@@ -77,16 +131,5 @@ function Avatar(props: Readonly<AvatarProps>) {
         <div className="text-gray-600 dark:text-gray-400">{props.title}</div>
       </div>
     </div>
-  );
-}
-
-function Mark(props: { readonly children: React.ReactNode }) {
-  return (
-    <>
-      {" "}
-      <mark className="text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">
-        {props.children}
-      </mark>{" "}
-    </>
   );
 }
