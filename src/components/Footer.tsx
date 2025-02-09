@@ -4,7 +4,7 @@ import React from "react";
 import { Container } from "@/components/Container";
 
 export function Footer() {
-  const navigation = ["L3 SQUAD", "Features", "Community", "Benifits", "Blog"];
+  const navigation = ["L3 SQUAD", "Features", "Community", "Benefits", "Blog"];
   const legal = ["Terms", "Privacy", "Legal"];
   return (
     <div className="relative">
@@ -24,7 +24,7 @@ export function Footer() {
                   height="32"
                   className="w-8"
                 />
-                <span>L3 Squad</span>
+                <span className="text-customBlue">L3 Squad</span>
               </Link>
             </div>
 

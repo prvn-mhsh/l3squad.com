@@ -2,12 +2,12 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Montserrat } from "next/font/google";
 import ThemeChanger from "./DarkSwitch";
-
-const montserrat = Montserrat({ subsets: ["latin"] });
+import { useTheme } from "next-themes";
 
 export const Navbar = () => {
+  const { theme } = useTheme();
+
   const sections = [
     { name: "L3squad", id: "home" },
     { name: "Projects", id: "projects" },
@@ -45,17 +45,14 @@ export const Navbar = () => {
       <nav className="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 z-50">
         <div className="container flex items-center justify-between p-8 mx-auto">
           <div className="flex items-center">
-            <Link href="#home" className="flex items-center">
+          <Link href="/" className="flex items-center">
               <Image
-                src="/img/l3squad.jpg"
+                src={theme === "dark" ? "/img/L3SQUAD_White.png" : "/img/L3SQUAD_Dark.png"}
                 width={100}
                 height={100}
                 alt="L3 Squad Logo"
                 className="w-24"
               />
-              <span className={`text-xl font-medium text-purple-600 ${montserrat.className}`}>
-                L3 SQUAD
-              </span>
             </Link>
           </div>
 
@@ -75,17 +72,17 @@ export const Navbar = () => {
                       });
                     }
                   }}
-                  className={`px-4 py-2 text-lg rounded-md ${activeSection === section.id
-                      ? "text-indigo-600 font-semibold"
-                      : "text-gray-800 dark:text-gray-200 hover:text-indigo-500"
-                    }`}
+                  className={`px-4 py-2 text-lg rounded-md uppercase ${
+                    activeSection === section.id
+                      ? "text-customBlue font-semibold"
+                      : "text-gray-800 dark:text-gray-200 hover:text-customBlue"
+                  }`}
                 >
                   {section.name}
                 </Link>
               </li>
             ))}
           </ul>
-
           {/* Theme Switch */}
           <ThemeChanger />
         </div>

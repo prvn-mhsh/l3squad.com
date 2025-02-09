@@ -44,7 +44,7 @@ export const Projects = () => {
             >
               <div className="flex items-center space-x-3">
                 {project.icon && (
-                  <div className="flex items-center justify-center bg-indigo-500 rounded-md w-11 h-11">
+                  <div className="flex items-center justify-center bg-customBlue rounded-md w-11 h-11">
                     <project.icon className="w-7 h-7 text-indigo-50" />
                   </div>
                 )}
