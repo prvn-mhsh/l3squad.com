@@ -15,6 +15,7 @@ const config: Config = {
     extend: {
       colors: {
         trueGray: colors.neutral,
+        customBlue: '#266c9b',
       },
     },
     fontFamily: {

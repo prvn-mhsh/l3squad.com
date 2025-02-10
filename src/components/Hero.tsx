@@ -33,7 +33,7 @@ export const Hero = () => {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdm8hipu_JXi_YWzW4h5Dzof46XDPjaYyMq9A02U3S_SSC4pQ/viewform"
                 target="_blank"
                 rel="noopener"
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md mt-4 ml-5">
+                className="px-8 py-4 text-lg font-medium text-center text-white bg-customBlue rounded-md mt-4 ml-5">
                 Apply for Internship
               </a>
             </div>

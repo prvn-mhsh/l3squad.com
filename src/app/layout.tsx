@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class">
           <Navbar />
-          <div className="pt-20">{children}</div>
+          <div className="pt-10">{children}</div>
           <Footer />
           <PopupWidget />
         </ThemeProvider>
