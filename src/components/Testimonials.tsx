@@ -7,6 +7,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 import praveenImg from "../../public/img/praveen.png";
 import VenkatImg from "../../public/img/Venkat.png";
@@ -22,6 +23,7 @@ export const Testimonials = () => {
       name: "Praveen",
       title: "Full Stack Intern",
       bgColor: "bg-red-50",
+      linkedin: "https://www.linkedin.com/in/prvnmhsh/",
     },
     {
       text: "This community has been my go-to place for learning and inspiration. I am glad to be part of this team.",
@@ -29,6 +31,7 @@ export const Testimonials = () => {
       name: "Venkat",
       title: "Working @ META",
       bgColor: "bg-green-50",
+      linkedin: "https://www.linkedin.com/in/venkatraman-r-ai/",
     },
     {
       text: "The mentorship and resources available here are unmatched. I've gained valuable insights into data analysis and machine learning.",
@@ -36,6 +39,7 @@ export const Testimonials = () => {
       name: "Yuvaraj",
       title: "Frontend Developer",
       bgColor: "bg-blue-50",
+      linkedin: "https://www.linkedin.com/in/yuvarajravi2/",
     },
     {
       text: "It's not just about learning; it's about contributing and giving back. The open discussions and coding challenges push me to become a better developer.",
@@ -43,6 +47,7 @@ export const Testimonials = () => {
       name: "Karthikeyan",
       title: "DevOps Lead",
       bgColor: "bg-yellow-50",
+      linkedin: "https://www.linkedin.com/in/karthikeyan",
     },
     {
       text: "The community's focus on sharing knowledge has made me a better engineer. I feel empowered to explore new technologies and collaborate with brilliant minds.",
@@ -50,6 +55,7 @@ export const Testimonials = () => {
       name: "Sabarinathan",
       title: "Marketing Automation Engineer",
       bgColor: "bg-purple-50",
+      linkedin: "https://www.linkedin.com/in/sabarinathan-k-51784260/",
     },
   ];
 
@@ -71,16 +77,18 @@ export const Testimonials = () => {
         >
           {testimonialData.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div
-                className={`flex flex-col justify-between w-full h-full px-14 py-14 rounded-2xl ${testimonial.bgColor} dark:bg-trueGray-800`}
-              >
-                <p className="text-2xl leading-normal">{testimonial.text}</p>
-                <Avatar
-                  image={testimonial.image}
-                  name={testimonial.name}
-                  title={testimonial.title}
-                />
-              </div>
+              <Link href={testimonial.linkedin} target="_blank" rel="noopener noreferrer">
+                <div
+                  className={`flex flex-col justify-between w-full px-14 py-14 rounded-2xl ${testimonial.bgColor} dark:bg-trueGray-800 min-h-[350px] h-full`}
+                >
+                  <p className="text-2xl leading-normal min-h-[100px]">{testimonial.text}</p>
+                  <Avatar
+                    image={testimonial.image}
+                    name={testimonial.name}
+                    title={testimonial.title}
+                  />
+                </div>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>
