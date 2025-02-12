@@ -9,12 +9,12 @@ export const Navbar = () => {
   const { theme } = useTheme();
 
   const sections = [
-    { name: "L3squad", id: "home" },
-    { name: "Projects", id: "projects" },
-    { name: "Benefits", id: "benefits" },
-    { name: "Video", id: "video" },
-    { name: "Testimonials", id: "testimonials" },
-    { name: "FAQ", id: "faq" },
+    { name: "Who are we?", id: "home" },
+    { name: "What do we do?", id: "projects" },
+    { name: "What do you get?", id: "benefits" },
+    { name: "Want to know more?", id: "video" },
+    { name: "What do people say?", id: "testimonials" },
+    { name: "Got Questions?", id: "faq" },
   ];
 
   const [activeSection, setActiveSection] = useState<string>("");
@@ -43,7 +43,7 @@ export const Navbar = () => {
   return (
     <div className="w-full">
       <nav className="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 z-50">
-        <div className="container flex items-center justify-between p-4 mx-auto">
+        <div className="container flex items-center justify-between p-2 mx-auto">
           <div className="flex items-center">
           <Link href="/" className="flex items-center">
               <Image
@@ -51,7 +51,7 @@ export const Navbar = () => {
                 width={100}
                 height={100}
                 alt="L3 Squad Logo"
-                className="w-20"
+                className="w-20 ml-4"
               />
             </Link>
           </div>
