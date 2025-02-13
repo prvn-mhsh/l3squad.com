@@ -4,7 +4,9 @@ import {
   AdjustmentsHorizontalIcon,
   SunIcon,
   UserGroupIcon,
-  GlobeAsiaAustraliaIcon
+  GlobeAsiaAustraliaIcon,
+  ServerStackIcon,
+  CheckCircleIcon
 } from "@heroicons/react/24/solid";
 
 
@@ -18,19 +20,25 @@ const benefitOne = {
   bullets: [
     {
       title: "Build a Strong Network",
-      desc: "Connect with fellow learners, professionals, and experts, expanding your career and learning opportunities.",
+      desc:  "Connect with talented students and other professionals, expanding their network.",
       icon: <GlobeAsiaAustraliaIcon />,
     },
     {
-      title: "Ongoing Support and Resources",
-      desc: "Stay up-to-date with new materials, events, and opportunities that are consistently added to help you grow.",
+      title: "Leadership Development",
+      desc: "Enhance soft skills such as communication, mentoring, and leadership.",
       icon: <UserGroupIcon />,
     },
     {
-      title: "Completely Free",
-      desc: "No hidden fees—everything in the community is completely free for all members, ensuring accessible education for all.",
+      title: "Industry Recognition",
+      desc: "Builds credibility and reputation as a thought leader in the community.",
       icon: <CursorArrowRaysIcon />,
     },
+    {
+      title: "Knowledge Sharing",
+      desc: " Opportunity to mentor and share knowledge, reinforcing their own understanding.",
+      icon: <ServerStackIcon/>,
+    },
+
   ],
 };
 
@@ -41,19 +49,25 @@ const benefitTwo = {
   image: benefitTwoImg,
   bullets: [
     {
-      title: "Collaborative Learning",
-      desc: "Share knowledge and learn from others' experiences to enhance your skills.",
+      title: "Real-world Experience",
+      desc: "Gain practical knowledge by working on real projects alongside professionals.",
       icon: <DevicePhoneMobileIcon />,
     },
     {
-      title: "Goal Setting and Accountability",
-      desc: "Set clear career goals with community support to stay on track.",
+      title: "Networking Opportunities",
+      desc: "Build connections in the software industry, increasing job prospects.",
       icon: <AdjustmentsHorizontalIcon />,
     },
     {
-      title: "Exposure to Opportunities",
-      desc: "Discover job openings, internships, and collaborative projects within the network.",
+      title: "Skill Enhancement",
+      desc: "Improve coding, problem-solving, and collaboration skills.",
       icon: <SunIcon />,
+    },
+
+    {
+      title:"Soft Skill Development",
+      desc: " Enhance communication, teamwork, and adaptability skills.",
+      icon: <CheckCircleIcon/>,
     },
   ],
 };

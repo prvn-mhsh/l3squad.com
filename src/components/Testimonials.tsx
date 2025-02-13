@@ -135,7 +135,7 @@ function Avatar(props: Readonly<AvatarProps>) {
         />
       </div>
       <div>
-        <div className="text-lg font-medium">{props.name}</div>
+        <div className="text-2xl font-semibold hover:underline">{props.name}</div>
         <div className="text-gray-600 dark:text-gray-400">{props.title}</div>
       </div>
     </div>
