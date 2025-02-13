@@ -5,6 +5,9 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { RocketLaunchIcon, BookOpenIcon, BugAntIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 
+
+
+
 const projects = [
   {
     title: "Tandem Train",
@@ -80,7 +83,7 @@ export const Projects = () => {
             <div className="flex items-start space-x-3">
               {project.icon && (
                 <div className="flex items-center justify-center bg-customBlue rounded-md w-10 h-10">
-                  <project.icon className="w-6 h-6 text-indigo-50" />
+                  <project.icon className="w-10 h-10 text-indigo-50" />
                 </div>
               )}
               <div>
@@ -107,8 +110,8 @@ export const Projects = () => {
           >
             <div className="flex items-center space-x-3">
               {project.icon && (
-                <div className="flex items-center justify-center bg-customBlue rounded-md w-10 h-10">
-                  <project.icon className="w-6 h-6 text-indigo-50" />
+                <div className="flex items-center justify-center bg-customBlue rounded-md w-9 h-9">
+                  <project.icon className="w-9 h-9 text-indigo-50" />
                 </div>
               )}
               <a

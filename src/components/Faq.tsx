@@ -36,21 +36,33 @@ export const Faq = () => {
 
 const faqdata = [
   {
-    question: "What is the purpose of this community?",
-    answer: "This community is designed to empower lifelong learners by providing free resources, networking opportunities, and a collaborative environment to support personal and professional growth.",
+    question: "What is this community about?",
+    answer: "It's a platform where professionals and students collaborate on software projects, share knowledge, and grow together.",
   },
+  {
+    question: "How is training conducted?",
+     answer: "Training is delivered through workshops, project-based learning, mentoring sessions, and peer collaboration.",
+  } ,
+
+
   {
     question: "Who can join the community?",
-    answer: "Anyone with a passion for learning, including students, professionals, and individuals seeking self-improvement.",
+    answer: "Anyone passionate about software development, whether you're a student, experienced professional, or tech enthusiast.",
+  },
+  
+  {
+    question: "What soft skills will I develop?",
+    answer: "Communication, teamwork, problem-solving, time management, and leadership.",
+  },
+ 
+  {
+    question: "Do I need prior experience to contribute? ",
+    answer: "Not necessarily. Beginners can start by contributing to documentation or small tasks, while professionals can handle complex tasks.",
   },
   {
-    question: "How can I contribute to the community? ",
+    question: "What are the benefits of joining this community?",
     answer:
-      "You can share your knowledge, mentor others, host workshops, or actively participate in discussions and projects.",
-  },
-  {
-    question: "Can I collaborate on projects with other members? ",
-    answer:
-      "Absolutely! Our community encourages collaborative projects and peer-to-peer learning.",
-  },
+      "Hands-on training in technical skills Improved soft skills like communication and teamwork, Networking opportunities with industry professionals,Consistent learning environment for career growth",
+  } ,
+
 ];
