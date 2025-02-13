@@ -4,7 +4,7 @@ import React from "react";
 import { Container } from "@/components/Container";
 
 export function Footer() {
-  const navigation = ["L3 SQUAD", "Features", "Community", "Benifits", "Blog"];
+  const navigation = ["L3 SQUAD", "Features", "Community", "Benefits", "Blog"];
   const legal = ["Terms", "Privacy", "Legal"];
   return (
     <div className="relative">
@@ -24,7 +24,7 @@ export function Footer() {
                   height="32"
                   className="w-8"
                 />
-                <span>L3 Squad</span>
+                <span className="text-customBlue">L3 Squad</span>
               </Link>
             </div>
 
@@ -63,7 +63,7 @@ export function Footer() {
             <div>Follow us</div>
             <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
               <a
-                href="https://twitter.com/L3-Squad"
+                href="https://x.com/L3Squaddotcom"
                 target="_blank"
                 rel="noopener"
               >
@@ -71,12 +71,12 @@ export function Footer() {
                 <Twitter />
               </a>
               <a
-                href="https://facebook.com/L3-Squad"
+                href="https://whatsapp.com/channel/0029VaxHLkR6hENxddP9h53d "
                 target="_blank"
                 rel="noopener"
               >
-                <span className="sr-only">Facebook</span>
-                <Facebook />
+                <span className="sr-only">WhatsApp Channel</span>
+                <WhatsApp />
               </a>
               <a
                 href="https://instagram.com/L3-Squad"
@@ -86,7 +86,7 @@ export function Footer() {
                 <span className="sr-only">Instagram</span>
                 <Instagram />
               </a>
-              <a href="https://linkedin.com/L3-Squad" target="_blank" rel="noopener">
+              <a href="https://www.linkedin.com/company/l3-squad/" target="_blank" rel="noopener">
                 <span className="sr-only">Linkedin</span>
                 <Linkedin />
               </a>
@@ -116,7 +116,7 @@ const Twitter = ({ size = 24 }) => (
   </svg>
 );
 
-const Facebook = ({ size = 24 }) => (
+const WhatsApp = ({ size = 24 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -124,7 +124,7 @@ const Facebook = ({ size = 24 }) => (
     viewBox="0 0 24 24"
     fill="currentColor"
   >
-    <path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07" />
+    <path d="M17.472 6.528C15.438 4.492 12.77 3.392 9.996 3.392c-5.426 0-9.852 4.426-9.852 9.856 0 1.738.442 3.424 1.276 4.936L0 24l6.012-1.56c1.44.864 3.064 1.352 4.744 1.352 5.428 0 9.856-4.428 9.856-9.856 0-2.774-1.1-5.442-3.14-7.472ZM10.008 21.352c-1.466 0-2.888-.394-4.112-1.14l-3.08.808.84-3.04c-.744-1.24-1.128-2.644-1.128-4.016 0-4.276 3.472-7.744 7.748-7.744 2.06 0 4.002.81 5.46 2.268 1.46 1.458 2.268 3.4 2.268 5.464 0 4.272-3.472 7.744-7.744 7.744ZM15.028 14.97l-.44.832c-.232.438-.784.692-1.22.528-1.214-.488-2.384-1.154-3.452-2.216-.96-.962-1.764-2.048-2.312-3.176-.256-.5-.008-1.062.488-1.292l.824-.396c.224-.11.504-.074.692.09l1.048.938c.216.194.294.504.184.77l-.4.964c-.05.116-.034.248.038.348.406.554.896 1.048 1.45 1.454.1.074.234.09.35.04l.964-.402c.268-.108.574-.03.766.186l.936 1.048c.164.186.2.466.088.692Z" />
   </svg>
 );
 const Instagram = ({ size = 24 }) => (

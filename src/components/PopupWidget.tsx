@@ -58,7 +58,7 @@ export function PopupWidget() {
       <Disclosure>
         {({ open }) => (
           <>
-            <DisclosureButton className="fixed z-40 flex items-center justify-center transition duration-300 bg-indigo-500 rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-indigo-600 focus:bg-indigo-600 ease">
+            <DisclosureButton className="fixed z-40 flex items-center justify-center transition duration-300 bg-customBlue rounded-full shadow-lg right-5 bottom-5 w-14 h-14 focus:outline-none hover:bg-indigo-600 focus:bg-indigo-600 ease">
               <span className="sr-only">Open Contact form Widget</span>
               <Transition
                 show={!open}
@@ -119,9 +119,9 @@ export function PopupWidget() {
             >
               <DisclosurePanel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
                 <div className="flex flex-col items-center justify-center h-32 p-5 bg-indigo-600">
-                  <h3 className="text-lg text-white">How can we help?</h3>
+                  <h3 className="text-lg text-white">Are you Intrested in joining our Community?</h3>
                   <p className="text-white opacity-50">
-                    We usually respond in a few hours
+                    Kindly fill the form below to get in touch with us.
                   </p>
                 </div>
                 <div className="flex-grow h-full p-6 overflow-auto bg-gray-50 ">
@@ -129,7 +129,7 @@ export function PopupWidget() {
                     <form onSubmit={handleSubmit(onSubmit)} noValidate>
                       <input
                         type="hidden"
-                        value="YOUR_ACCESS_KEY_HERE"
+                        value="143db6ee-f24f-4929-99d0-4e72f07b100d"
                         {...register("apikey")}
                       />
                       <input
@@ -214,7 +214,7 @@ export function PopupWidget() {
                           htmlFor="message"
                           className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
                         >
-                          Your Message
+                          Reason behind your intrest
                         </label>
 
                         <textarea
@@ -304,7 +304,7 @@ export function PopupWidget() {
                         />
                       </svg>
                       <h3 className="py-5 text-xl text-green-500">
-                        Message sent successfully
+                        Message sent successfully.We will get back to you soon!
                       </h3>
                       <p className="text-gray-700 md:px-3">{Message}</p>
                       <button
