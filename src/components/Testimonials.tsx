@@ -22,6 +22,7 @@ export const Testimonials = () => {
       image: praveenImg,
       name: "Praveen",
       title: "Full Stack Intern",
+      experience:"2 years",
       bgColor: "bg-red-50",
       linkedin: "https://www.linkedin.com/in/prvnmhsh/",
     },
@@ -29,7 +30,8 @@ export const Testimonials = () => {
       text: "This community has been my go-to place for learning and inspiration. I am glad to be part of this team.",
       image: VenkatImg,
       name: "Venkat",
-      title: "Working @ META",
+      title: "Full Stack Engineer",
+      experience:"18 years",
       bgColor: "bg-green-50",
       linkedin: "https://www.linkedin.com/in/venkatraman-r-ai/",
     },
@@ -37,7 +39,8 @@ export const Testimonials = () => {
       text: "The mentorship and resources available here are unmatched. I've gained valuable insights into data analysis and machine learning.",
       image: YuvarajImg,
       name: "Yuvaraj",
-      title: "Frontend Developer",
+      title: "Senior Frontend Developer",
+      experience:"10 years",
       bgColor: "bg-blue-50",
       linkedin: "https://www.linkedin.com/in/yuvarajravi2/",
     },
@@ -46,6 +49,7 @@ export const Testimonials = () => {
       image: KarthiImg,
       name: "Karthikeyan",
       title: "DevOps Lead",
+      experience:"2 years",
       bgColor: "bg-yellow-50",
       linkedin: "https://www.linkedin.com/in/karthikeyan",
     },
@@ -53,7 +57,8 @@ export const Testimonials = () => {
       text: "The community's focus on sharing knowledge has made me a better engineer. I feel empowered to explore new technologies and collaborate with brilliant minds.",
       image: SabarinathanImg,
       name: "Sabarinathan",
-      title: "Marketing Automation Engineer",
+      title: "Martech/Integration Engineer",
+      experience:"11 years",
       bgColor: "bg-purple-50",
       linkedin: "https://www.linkedin.com/in/sabarinathan-k-51784260/",
     },
@@ -72,31 +77,30 @@ export const Testimonials = () => {
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           breakpoints={{
             640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },  
             1024: { slidesPerView: 3 },
           }}
+          
         >
           {testimonialData.map((testimonial, index) => (
-            <SwiperSlide key={index}>
-              <Link href={testimonial.linkedin} target="_blank" rel="noopener noreferrer">
-                <div
-                  className={`flex flex-col justify-between w-full px-14 py-14 rounded-2xl ${testimonial.bgColor} dark:bg-trueGray-800 min-h-[350px] h-full`}
-                >
-                  <p className="text-2xl leading-normal min-h-[100px]">{testimonial.text}</p>
-                  <Avatar
-                    image={testimonial.image}
-                    name={testimonial.name}
-                    title={testimonial.title}
-                  />
-                </div>
-              </Link>
-            </SwiperSlide>
+            <SwiperSlide key={index} className="flex items-stretch">
+            <Link href={testimonial.linkedin} target="_blank" rel="noopener noreferrer" className="w-full">
+              <div
+                className={`flex flex-col justify-between w-full px-14 py-14 rounded-2xl ${testimonial.bgColor} 
+                dark:bg-trueGray-800 h-[400px] hover:shadow-lg transition-shadow`}
+              >
+                <p className="text-2xl leading-normal flex-1">{testimonial.text}</p>
+                <Avatar image={testimonial.image} name={testimonial.name} title={testimonial.title} experience={testimonial.experience}/>
+              </div>
+            </Link>
+          </SwiperSlide>                    
           ))}
         </Swiper>
 
         {/* Navigation Buttons */}
         <div className="absolute top-1/2 left-3 transform -translate-y-1/2 z-10">
           <button
-            className="p-2 bg-gray-800 rounded-full hover:bg-gray-600"
+            className="p-3 bg-gray-800 rounded-full hover:bg-gray-600"
             onClick={() => swiperRef.current?.slidePrev()}
           >
             <ArrowLeftIcon className="w-5 h-5 text-white" />
@@ -104,7 +108,7 @@ export const Testimonials = () => {
         </div>
         <div className="absolute top-1/2 right-3 transform -translate-y-1/2 z-10">
           <button
-            className="p-2 bg-gray-800 rounded-full hover:bg-gray-600"
+            className="p-3 bg-gray-800 rounded-full hover:bg-gray-600"
             onClick={() => swiperRef.current?.slideNext()}
           >
             <ArrowRightIcon className="w-5 h-5 text-white" />
@@ -119,6 +123,7 @@ interface AvatarProps {
   image: any;
   name: string;
   title: string;
+  experience: string;
 }
 
 function Avatar(props: Readonly<AvatarProps>) {
@@ -137,6 +142,7 @@ function Avatar(props: Readonly<AvatarProps>) {
       <div>
         <div className="text-2xl font-semibold hover:underline">{props.name}</div>
         <div className="text-gray-600 dark:text-gray-400">{props.title}</div>
+        <div className="text-gray-600 dark:text-gray-400">{props.experience}</div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
-import { RocketLaunchIcon, BookOpenIcon, BugAntIcon } from "@heroicons/react/24/solid";
+import { RocketLaunchIcon, BookOpenIcon, BugAntIcon ,PuzzlePieceIcon ,CpuChipIcon ,CodeBracketIcon,LightBulbIcon, ServerStackIcon,BriefcaseIcon} from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 
 
@@ -11,17 +11,17 @@ import { motion } from "framer-motion";
 const projects = [
   {
     title: "Tandem Train",
-    icon: RocketLaunchIcon,
+    icon: LightBulbIcon,
     description: "This tool provides videos and content about L3Squad. Interns interested in joining L3Squad can use it to learn more about the organization and complete an assessment before onboarding. It is similar to Moodle, offering a structured learning experience.",
   },
   {
     title: "Waggle",
-    icon: BookOpenIcon,
+    icon: CpuChipIcon,
     description: "A powerful tool designed for documentation and seamless collaboration. It enables teams to create, organize, and share information efficiently. Similar to Confluence, it helps streamline knowledge management and enhance teamwork. New insights, updates, and issues are documented in this tool to improve workflow.",
   },
   {
     title: "Beehive",
-    icon: BugAntIcon,
+    icon:  ServerStackIcon,
     description: "This tool serves as a platform for creating, organizing, and managing tasks and projects, ensuring smooth collaboration and productivity. It includes tasks assigned to community members, with points awarded for each task to encourage active participation and timely completion. Similar to Taiga, it offers a structured workflow that helps teams track progress, assign responsibilities, and stay focused on their goals.",
   },
 ];
@@ -47,19 +47,19 @@ const opensource = [
   },
   {
     title: "React Chef",
-    icon: BugAntIcon,
+    icon: PuzzlePieceIcon,
     link: "https://github.com/web-slate/react-chef",
     description: "React-Chef is a Node Module that helps you create React boilerplate apps instantly, prescribing best practices.",
   },
   {
     title: "Transactify",
-    icon: BookOpenIcon,
+    icon: CodeBracketIcon,
     link: "https://github.com/web-slate/transactify",
     description: "This repository contains a Python module for predicting transaction categorization.",
   },
   {
     title: "GitAI",
-    icon: RocketLaunchIcon,
+    icon: BriefcaseIcon,
     link: "https://github.com/web-slate/gitai",
     description: "GitAI is an ML project aimed at assisting developers in learning and using Git commands effectively.",
   },
@@ -82,8 +82,8 @@ export const Projects = () => {
           >
             <div className="flex items-start space-x-3">
               {project.icon && (
-                <div className="flex items-center justify-center bg-customBlue rounded-md w-10 h-10">
-                  <project.icon className="w-10 h-10 text-indigo-50" />
+                <div className="flex items-center justify-center bg-customBlue rounded-md w-9 h-9">
+                  <project.icon className="w-9 h-9 text-indigo-50" />
                 </div>
               )}
               <div>

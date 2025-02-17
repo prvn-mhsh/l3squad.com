@@ -52,7 +52,11 @@ const faqdata = [
   
   {
     question: "What soft skills will I develop?",
-    answer: "Communication, teamwork, problem-solving, time management, and leadership.",
+    answer: "Communication & Public Speaking Problem-Solving & Critical Thinking Collaboration & Teamwork Leadership & Mentorship Time Management & Productivity Emotional Intelligence Negotiation & Persuasion.",
+  },
+  {
+    question: "What tech skills will I develop?",
+    answer: "Coding & Programming Data Analytics & Problem-Solving Algorithmic Thinking & Logical Reasoning.Software Development & Engineering System Design & Architecture Cloud Computing & DevOps Cybersecurity Awareness Automation & Scripting Database Management AI & Machine Learning Fundamentals",
   },
  
   {

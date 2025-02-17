@@ -57,7 +57,7 @@ export const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <ul className="flex space-x-6">
+          <ul className="flex space-x-1">
             {sections.map((section) => (
               <li key={section.id}>
                 <Link
@@ -72,7 +72,7 @@ export const Navbar = () => {
                       });
                     }
                   }}
-                  className={`px-4 py-2 text-lg rounded-md uppercase ${
+                  className={`px-2 py-1 text-lg rounded-md uppercase ${
                     activeSection === section.id
                       ? "text-customBlue font-semibold"
                       : "text-gray-800 dark:text-gray-200 hover:text-customBlue"
