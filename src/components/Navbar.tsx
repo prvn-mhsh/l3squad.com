@@ -56,14 +56,6 @@ export const Navbar = () => {
             />
           </Link>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="block md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300"
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-
           {/* Desktop Navigation */}
           <ul className="hidden md:flex space-x-6">
             {sections.map((section) => (
@@ -86,8 +78,19 @@ export const Navbar = () => {
             ))}
           </ul>
 
-          {/* Theme Switch */}
-          <ThemeChanger />
+          {/* Right Side: Theme Switch & Mobile Menu Button */}
+          <div className="flex items-center space-x-4 ml-auto">
+            {/* Theme Switch */}
+            <ThemeChanger />
+
+            {/* Mobile Menu Button (Only on Small Screens) */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="block md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300"
+            >
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation Menu */}
