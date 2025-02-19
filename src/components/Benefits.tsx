@@ -8,6 +8,7 @@ interface BenefitsProps {
     imgPos?: "left" | "right";
     title: string;
     desc: string;
+    subtitle?: string;
     image: any;
     bullets: {
       title: string;
@@ -45,6 +46,10 @@ export const Benefits = (props: Readonly<BenefitsProps>) => {
             <div className="flex flex-col w-full mt-4">
               <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
                 {data.title}
+              </h3>
+
+              <h3 className="text-2xl font-semibold italic text-gray-800 dark:text-gray-100 mt-2">
+                {data.subtitle}
               </h3>
 
               <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">

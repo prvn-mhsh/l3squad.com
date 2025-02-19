@@ -15,7 +15,8 @@ import benefitTwoImg from "../../public/img/benefit-two.png";
 
 const benefitOne = {
   title: "Life long Learners: 'L3 SQUAD' ",
-  desc: "Join our community to unlock a world of free, lifelong learning opportunities. With access to expert mentorship, collaborative projects, and a wide range of educational resources, you’ll be supported in your personal and professional growth.",
+  subtitle:"For working professionals : ",
+  desc:"Unlock your career potential with our community. Gain access to exclusive upskilling programs, leadership development, and personalized mentorship. Expand your network, enhance your skills, and take your career to new heights with our tailored resources and industry connections.",
   image: benefitOneImg,
   bullets: [
     {
@@ -44,8 +45,9 @@ const benefitOne = {
 
 const benefitTwo = {
   title: "Our Community Benefits Here",
-  desc: "For College Students: We provide mentorship, internships, skill-building workshops, and networking events to prepare you for your dream career.  For Working Professionals: Access upskilling programs, leadership training, career counseling, and industry connections to excel in your field." ,
-  
+  subtitle:"For college students : ",
+  desc: " We provide mentorship, internships, skill-building workshops, and networking events to prepare you for your dream career.  For Working Professionals: Access upskilling programs, leadership training, career counseling, and industry connections to excel in your field." ,
+  subtittle:"For Working Professionals: ",
   image: benefitTwoImg,
   bullets: [
     {
